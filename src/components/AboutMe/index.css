@@ -1,0 +1,37 @@
+.container {
+  width: 1, 440px;
+  height: 640px;
+  padding: 160px 80px 160px 80px;
+  gap: 370px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.description {
+  width: 630px;
+  height: 302px;
+  gap: 40px;
+  opacity: 0px;
+}
+#title {
+  font-family: Courier New;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 72px;
+  text-align: left;
+}
+
+#text {
+  font-family: "Kanit";
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 29.9px;
+  text-align: left;
+}
+.image {
+  height: 320px;
+  gap: 0px;
+  border: 4px 0px 0px 0px;
+  opacity: 0px;
+}
