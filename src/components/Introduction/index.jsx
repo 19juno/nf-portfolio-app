@@ -13,7 +13,9 @@ export default function Introduction() {
   return (
     <div className="container">
       <div className="">
-        <p id="title">Hi, I’m Kanafina Dinara, I build things for the web </p>
+        <p id="title">
+          Salem Alem! I’m Kanafina Dinara, I build things for the web{" "}
+        </p>
         <p id="description">I’m software developer and this is my portfolio.</p>
 
         <Button variant="contained" onClick={handleClick}>

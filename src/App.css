@@ -1,5 +1,6 @@
-body {
+main {
   width: 1, 440px;
-  height: 1500px;
+  height: auto;
   background-color: #dbdbdb;
+  min-width: auto;
 }

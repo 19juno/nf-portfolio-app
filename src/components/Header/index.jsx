@@ -1,16 +1,98 @@
 import * as React from "react";
 import "./index.css";
-import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
+
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { Grid } from "@mui/material";
+
+const AnimationBtn = ({ to, children, whileHover, whileTap }) => {
+  return (
+    <Link to={to}>
+      <motion.button
+        whileHover={whileHover}
+        whileTap={whileTap}
+        variant="text"
+        style={{ background: "transparent", border: "none", cursor: "pointer" }}
+      >
+        {children}
+      </motion.button>
+    </Link>
+  );
+};
 
 export default function Header() {
   return (
     <div className="header">
-      <p id="name">Kanafina Dinara</p>
-      <div className="navbar">
-        <Stack spacing={2} direction="row">
-          <Link to="/about">
+      <Grid container spacing={4}>
+        <Grid item xs={6} sm={4} md={2}>
+          <AnimationBtn
+            to="/about"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            About
+          </AnimationBtn>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <AnimationBtn
+            to="/experience"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Experience
+          </AnimationBtn>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <AnimationBtn
+            to="/projects"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Projects
+          </AnimationBtn>
+        </Grid>
+        <Grid item xs={12} sm={5} md={1}>
+          <AnimationBtn
+            to="/contacts"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Contacts
+          </AnimationBtn>
+        </Grid>
+      </Grid>
+
+      {/* <Stack spacing={2}direction="row">
+          <AnimationBtn
+            to="/about"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            About
+          </AnimationBtn>
+          <AnimationBtn
+            to="/experience"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Experience
+          </AnimationBtn>
+          <AnimationBtn
+            to="/projects"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Projects
+          </AnimationBtn>
+          <AnimationBtn
+            to="/contacts"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Contacts
+          </AnimationBtn> */}
+
+      {/* <Link to="/about">
             <Button variant="text">About</Button>
           </Link>
           <Link to="/experience">
@@ -22,9 +104,8 @@ export default function Header() {
           </Link>
           <Link to="/contacts">
             <Button variant="text">Contacts</Button>
-          </Link>
-        </Stack>
-      </div>
+          </Link> */}
+      {/* </Stack> */}
     </div>
   );
 }
