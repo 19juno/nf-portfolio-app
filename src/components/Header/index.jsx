@@ -12,7 +12,12 @@ const AnimationBtn = ({ to, children, whileHover, whileTap }) => {
         whileHover={whileHover}
         whileTap={whileTap}
         variant="text"
-        style={{ background: "transparent", border: "none", cursor: "pointer" }}
+        style={{
+          background: "transparent",
+          border: "none",
+          cursor: "pointer",
+          outline: "none",
+        }}
       >
         {children}
       </motion.button>
@@ -23,7 +28,7 @@ const AnimationBtn = ({ to, children, whileHover, whileTap }) => {
 export default function Header() {
   return (
     <div className="header">
-      <Grid container spacing={4}>
+      <Grid container spacing={1}>
         <Grid item xs={6} sm={4} md={2}>
           <AnimationBtn
             to="/about"
@@ -33,7 +38,7 @@ export default function Header() {
             About
           </AnimationBtn>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={6} sm={4} md={2}>
           <AnimationBtn
             to="/experience"
             whileHover={{ scale: 1.1 }}
@@ -42,7 +47,7 @@ export default function Header() {
             Experience
           </AnimationBtn>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={6} sm={4} md={2}>
           <AnimationBtn
             to="/projects"
             whileHover={{ scale: 1.1 }}
@@ -51,7 +56,7 @@ export default function Header() {
             Projects
           </AnimationBtn>
         </Grid>
-        <Grid item xs={12} sm={5} md={1}>
+        <Grid item xs={6} sm={4} md={2}>
           <AnimationBtn
             to="/contacts"
             whileHover={{ scale: 1.1 }}

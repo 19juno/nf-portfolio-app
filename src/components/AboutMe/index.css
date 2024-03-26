@@ -6,20 +6,13 @@
   border: 1px 0px 0px 0px;
   opacity: 0px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .description {
   width: 630px;
   height: 302px;
   gap: 40px;
   opacity: 0px;
-}
-#title {
-  font-family: Courier New;
-  font-size: 60px;
-  font-weight: 700;
-  line-height: 72px;
-  text-align: left;
 }
 
 #text {
@@ -31,7 +24,6 @@
 }
 .image {
   height: 320px;
-  gap: 0px;
-  border: 4px 0px 0px 0px;
-  opacity: 0px;
+  border-radius: 15px;
+  margin-right: 0;
 }

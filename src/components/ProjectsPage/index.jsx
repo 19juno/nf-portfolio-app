@@ -11,7 +11,7 @@ export default function ProjectsPage() {
       className="container"
     >
       <div id="box">
-        <p>Projects I've worked on</p>
+        <p id="title">Projects I've worked on</p>
         <div id="projects"></div>
         <div id="projects"></div>
         <div id="projects"></div>

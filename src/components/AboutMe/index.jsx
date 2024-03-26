@@ -13,19 +13,25 @@ export default function AboutMe() {
       className="container"
     >
       {/* <div className="description"> */}
-      <Grid container spacing={4}>
+      <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>
+          <Hidden only="xs">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              style={{ display: "flex", justifyContent: "center" }}
+            >
+              <img className="image" src={Image}></img>
+            </motion.div>
+          </Hidden>
+        </Grid>
+        <Grid item xs={12} sm={6} style={{ marginTop: 0 }}>
           <p id="title">About me</p>
           <p id="text">
             My name is Kanafina Dinara. I'm a web developer. My goal is to
             create effective and visually attractive solutions that leave
             impression and achieve your goals.
           </p>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Hidden only="xs">
-            <img className="image" src={Image}></img>
-          </Hidden>
         </Grid>
       </Grid>
       {/* </div> */}

@@ -1,12 +1,12 @@
 .header {
-  width: 1, 439px;
+  width: 100vw;
   height: 100px;
   padding: 32px 80px 32px 80px;
-
+  background-color: whitesmoke;
   display: flex;
 
   align-items: baseline;
-  position: fixed;
+
   top: 0;
 }
 
