@@ -1,20 +1,19 @@
 import "./index.css";
-import Image from "../../assets/image.jpg";
+import Image from "../../assets/it-girl.svg";
 import { motion } from "framer-motion";
 import { Grid, Hidden } from "@mui/material";
 
 export default function AboutMe() {
   return (
-    <motion.div
-      initial={{ y: 100 }}
-      animate={{ y: 0 }}
-      exit={{ opacity: 1 }}
-      transition={{ duration: 0.75, ease: "easeOut" }}
-      className="container"
-    >
-      {/* <div className="description"> */}
-      <Grid container spacing={2}>
-        <Grid item xs={12} sm={6}>
+    <Grid container columnSpacing={2}>
+      <motion.div
+        initial={{ y: 100 }}
+        animate={{ y: 0 }}
+        exit={{ opacity: 1 }}
+        transition={{ duration: 0.75, ease: "easeOut" }}
+        className="container"
+      >
+        <Grid item>
           <Hidden only="xs">
             <motion.div
               whileHover={{ scale: 1.1 }}
@@ -25,7 +24,7 @@ export default function AboutMe() {
             </motion.div>
           </Hidden>
         </Grid>
-        <Grid item xs={12} sm={6} style={{ marginTop: 0 }}>
+        <Grid item style={{ marginTop: 0 }}>
           <p id="title">About me</p>
           <p id="text">
             My name is Kanafina Dinara. I'm a web developer. My goal is to
@@ -33,20 +32,7 @@ export default function AboutMe() {
             impression and achieve your goals.
           </p>
         </Grid>
-      </Grid>
-      {/* </div> */}
-
-      {/* <div className="description">
-        <p id="title">About me</p>
-        <p id="text">
-          My name is Kanafina Dinara. I'm a web developer. My goal is to create
-          effective and visually attractive solutions that leave impression and
-          achieve your goals.
-        </p>
-      </div>
-      <div>
-        <img className="image" src={Image}></img>
-      </div> */}
-    </motion.div>
+      </motion.div>
+    </Grid>
   );
 }

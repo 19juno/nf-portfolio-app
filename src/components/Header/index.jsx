@@ -1,116 +1,95 @@
 import * as React from "react";
-import "./index.css";
-
+import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Grid } from "@mui/material";
+import { IconButton } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import "./index.css";
 
 const AnimationBtn = ({ to, children, whileHover, whileTap }) => {
   return (
-    <Link to={to}>
-      <motion.button
-        whileHover={whileHover}
-        whileTap={whileTap}
-        variant="text"
-        style={{
-          background: "transparent",
-          border: "none",
-          cursor: "pointer",
-          outline: "none",
-        }}
-      >
-        {children}
-      </motion.button>
-    </Link>
+    <div>
+      <Link to={to}>
+        <motion.button
+          whileHover={whileHover}
+          whileTap={whileTap}
+          variant="text"
+          style={{
+            background: "transparent",
+            border: "none",
+            cursor: "pointer",
+            outline: "none",
+          }}
+        >
+          {children}
+        </motion.button>
+      </Link>
+    </div>
   );
 };
 
-export default function Header() {
+const pages = [
+  {
+    name: "HOME",
+    path: "/home",
+  },
+  {
+    name: "ABOUT",
+    path: "/about",
+  },
+  {
+    name: "EXPERIENCE",
+    path: "/experience",
+  },
+  {
+    name: "PROJECTS",
+    path: "/projects",
+  },
+  {
+    name: "CONTACTS",
+    path: "/contacts",
+  },
+];
+
+export default function TemporaryDrawer() {
+  const [open, setOpen] = React.useState(false);
+
+  const toggleDrawer = (newOpen) => () => {
+    setOpen(newOpen);
+  };
+
+  const DrawerList = (
+    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+      <Grid containercolumnspacing={{ xs: 1, sm: 1, md: 1 }}>
+        {pages.map((el, index) => (
+          <Grid key={index} item className="name">
+            <AnimationBtn
+              to={el.path}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              {el.name}
+            </AnimationBtn>
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
+  );
+
   return (
     <div className="header">
-      <Grid container spacing={1}>
-        <Grid item xs={6} sm={4} md={2}>
-          <AnimationBtn
-            to="/about"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            About
-          </AnimationBtn>
-        </Grid>
-        <Grid item xs={6} sm={4} md={2}>
-          <AnimationBtn
-            to="/experience"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Experience
-          </AnimationBtn>
-        </Grid>
-        <Grid item xs={6} sm={4} md={2}>
-          <AnimationBtn
-            to="/projects"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Projects
-          </AnimationBtn>
-        </Grid>
-        <Grid item xs={6} sm={4} md={2}>
-          <AnimationBtn
-            to="/contacts"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Contacts
-          </AnimationBtn>
-        </Grid>
-      </Grid>
-
-      {/* <Stack spacing={2}direction="row">
-          <AnimationBtn
-            to="/about"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            About
-          </AnimationBtn>
-          <AnimationBtn
-            to="/experience"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Experience
-          </AnimationBtn>
-          <AnimationBtn
-            to="/projects"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Projects
-          </AnimationBtn>
-          <AnimationBtn
-            to="/contacts"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Contacts
-          </AnimationBtn> */}
-
-      {/* <Link to="/about">
-            <Button variant="text">About</Button>
-          </Link>
-          <Link to="/experience">
-            <Button variant="text">Experience</Button>
-          </Link>
-
-          <Link to="/projects">
-            <Button variant="text">Projects</Button>
-          </Link>
-          <Link to="/contacts">
-            <Button variant="text">Contacts</Button>
-          </Link> */}
-      {/* </Stack> */}
+      <IconButton
+        aria-label="menu"
+        className="menu_button"
+        onClick={toggleDrawer(true)}
+      >
+        <MenuIcon />
+      </IconButton>
+      <Drawer open={open} onClose={toggleDrawer(false)}>
+        {DrawerList}
+      </Drawer>
     </div>
   );
 }

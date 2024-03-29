@@ -1,19 +1,16 @@
 .header {
   width: 100vw;
-  height: 100px;
-  padding: 32px 80px 32px 80px;
-  background-color: whitesmoke;
+  height: 50px;
+  padding: 32px 80px 32px 60px;
   display: flex;
-
-  align-items: baseline;
-
-  top: 0;
+  justify-content: start;
 }
 
-#name {
-  font-family: Courier New;
-  font-size: 32px;
+.name {
+  font-family: "Courier New";
+  font-size: 22px;
   font-weight: 700;
   line-height: 36.25px;
   text-align: left;
+  padding-top: 30px;
 }

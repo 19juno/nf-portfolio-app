@@ -5,8 +5,6 @@
   gap: 370px;
   border: 1px 0px 0px 0px;
   opacity: 0px;
-  display: flex;
-  justify-content: center;
 }
 .description {
   width: 630px;
@@ -23,7 +21,7 @@
   text-align: left;
 }
 .image {
-  height: 320px;
+  height: 600px;
   border-radius: 15px;
   margin-right: 0;
 }
