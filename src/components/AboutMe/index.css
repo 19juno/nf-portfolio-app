@@ -1,27 +1,46 @@
-.container {
-  width: 1, 440px;
-  height: auto;
-  padding: 160px 80px 160px 80px;
-  gap: 370px;
+.container2 {
+  width: 100vw;
+  height: 100vh;
+  padding-left: 20px 80px 20px 50px;
   border: 1px 0px 0px 0px;
   opacity: 0px;
 }
-.description {
-  width: 630px;
-  height: 302px;
-  gap: 40px;
-  opacity: 0px;
-}
 
-#text {
+#text_about {
   font-family: "Kanit";
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 300;
-  line-height: 29.9px;
-  text-align: left;
+  line-height: 50px;
+  text-align: center;
+  width: 800px;
 }
 .image {
   height: 600px;
   border-radius: 15px;
   margin-right: 0;
+}
+
+@media only screen and (max-width: 770px) {
+  .container2 {
+    width: 100vw;
+    height: 100vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+  }
+  #text_about {
+    font-family: "Kanit";
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 40px;
+    text-align: center;
+    width: 380px;
+  }
+
+  .image {
+    height: 300px;
+    border-radius: 15px;
+    margin-right: 0;
+  }
 }
