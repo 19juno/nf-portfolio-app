@@ -1,9 +1,7 @@
-.container {
-  width: 1, 440px;
+.container3 {
+  width: 100vw;
   height: auto;
-  gap: 370px;
+  padding: 20px 80px 20px 80px;
   border: 1px 0px 0px 0px;
   opacity: 0px;
-  display: flex;
-  justify-content: space-between;
 }

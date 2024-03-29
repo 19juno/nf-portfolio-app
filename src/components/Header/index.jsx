@@ -33,7 +33,7 @@ const AnimationBtn = ({ to, children, whileHover, whileTap }) => {
 const pages = [
   {
     name: "HOME",
-    path: "/home",
+    path: "/",
   },
   {
     name: "ABOUT",
