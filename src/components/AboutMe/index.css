@@ -1,6 +1,6 @@
 .container2 {
   width: 100vw;
-  height: 100vh;
+  height: AUTO;
   padding-left: 20px 80px 20px 50px;
   border: 1px 0px 0px 0px;
   opacity: 0px;
@@ -14,7 +14,7 @@
   text-align: center;
   width: 800px;
 }
-.image {
+.image1 {
   height: 600px;
   border-radius: 15px;
   margin-right: 0;
@@ -38,7 +38,7 @@
     width: 380px;
   }
 
-  .image {
+  .image1 {
     height: 300px;
     border-radius: 15px;
     margin-right: 0;
