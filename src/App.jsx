@@ -9,7 +9,6 @@ import ProjectsPage from "./components/ProjectsPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { useNavigate } from "react-router-dom";
-import Introduction from "./components/Introduction";
 
 function App() {
   const navigate = useNavigate();
@@ -23,8 +22,7 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path="/" element={<Introduction />} />
-        <Route path="/about" element={<AboutMe />} />
+        <Route path="/" element={<AboutMe />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/contacts" element={<Contacts />} />

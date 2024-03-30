@@ -18,16 +18,19 @@ const projects = [
     image: "",
     name: "To-Do App",
     description: "",
+    stacklist: ["React", "Javascript", "React-Router-Dom"],
   },
   {
     image: "",
     name: "Мои будущие пет-проекты",
     description: "",
+    stacklist: ["React", "Javascript", "React-Router-Dom"],
   },
   {
     image: "",
     name: "Мои будущие пет-проекты",
     description: "",
+    stacklist: ["React", "Javascript", "React-Router-Dom"],
   },
 ];
 
@@ -48,7 +51,7 @@ export default function ProjectsPage() {
       animate={{ y: 0 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.75, ease: "easeOut" }}
-      className="container3"
+      className="container4"
     >
       <p id="title">Projects</p>
       <Grid container spacing={1}>

@@ -6,8 +6,10 @@ import {
   CardMedia,
   CardContent,
   Card,
+  Box,
 } from "@mui/material";
 import { Dialog } from "@mui/material";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 export default function Modal({ open, onClose, el }) {
   return (
@@ -26,9 +28,20 @@ export default function Modal({ open, onClose, el }) {
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button size="small" color="primary" onClick={onClose}>
-              Exit
-            </Button>
+            <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+              <Button size="small" color="primary" onClick={onClose}>
+                Close
+              </Button>
+              <Button
+                size="small"
+                color="primary"
+                variant="contained"
+                endIcon={<GitHubIcon />}
+                onClick={onClose}
+              >
+                Github
+              </Button>
+            </Box>
           </CardActions>
         </Card>
       </Dialog>

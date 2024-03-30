@@ -36,10 +36,6 @@ const pages = [
     path: "/",
   },
   {
-    name: "ABOUT",
-    path: "/about",
-  },
-  {
     name: "EXPERIENCE",
     path: "/experience",
   },
@@ -79,7 +75,7 @@ export default function TemporaryDrawer() {
   );
 
   return (
-    <div className="header">
+    <motion.div className="header" animate="circle(30px at 50px 50px)">
       <IconButton
         aria-label="menu"
         className="menu_button"
@@ -90,6 +86,6 @@ export default function TemporaryDrawer() {
       <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>
-    </div>
+    </motion.div>
   );
 }

@@ -1,5 +1,6 @@
 import "./index.css";
 import { Button } from "@mui/material";
+import { motion } from "framer-motion";
 
 export default function Introduction() {
   const handleClick = () => {
@@ -17,10 +18,11 @@ export default function Introduction() {
           Salem Alem! I’m Kanafina Dinara. I’m software developer and this is my
           portfolio.
         </p>
-
-        <button className="button" onClick={handleClick}>
-          Check out my CV
-        </button>
+        <motion.div animate={{ x: 100 }}>
+          <button className="button" onClick={handleClick}>
+            Check out my CV
+          </button>
+        </motion.div>
       </div>
     </div>
   );

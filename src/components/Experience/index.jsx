@@ -1,6 +1,19 @@
 import "./index.css";
 import { motion } from "framer-motion";
-import { Grid } from "@mui/material";
+import { Grid, ListItem, Typography } from "@mui/material";
+import Image2 from "../../assets/image.svg";
+import { styled } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+import LinearProgress, {
+  linearProgressClasses,
+} from "@mui/material/LinearProgress";
+import JS from "../../assets/js.png";
+import CSS from "../../assets/css.svg";
+import HTML from "../../assets/html.png";
+import NodeJS from "../../assets/nodejs.svg";
+import REACTicon from "../../assets/react.svg";
+import REDUXicon from "../../assets/redux.svg";
 
 const work = [
   {
@@ -14,18 +27,27 @@ const work = [
     position: "Engineer-virologist",
   },
 ];
-const education = [
-  {
-    date: "Sep 2023 - Apr 2024",
-    school: "Nfactorial! Web-intro Course",
-    degree: "Web-developer",
-  },
-  {
-    date: "Sep 2015 - June 2017",
-    school: "Karagandy State University, Kazakhstan ",
-    degree: "Master of Science in Chemistry",
-  },
+const stackslist = [
+  { stack: "HTML", image: HTML },
+  { stack: "CSS", image: CSS },
+  { stack: "Javascript", image: JS },
+  { stack: "React", image: REACTicon },
+  { stack: "Node JS", image: NodeJS },
+  { stack: "React Redux", image: REDUXicon },
 ];
+
+const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
+  height: 10,
+  borderRadius: 5,
+  [`&.${linearProgressClasses.colorPrimary}`]: {
+    backgroundColor:
+      theme.palette.grey[theme.palette.mode === "light" ? 200 : 800],
+  },
+  [`& .${linearProgressClasses.bar}`]: {
+    borderRadius: 5,
+    backgroundColor: theme.palette.mode === "light" ? "#1a90ff" : "#308fe8",
+  },
+}));
 
 export default function Experience() {
   return (
@@ -34,39 +56,28 @@ export default function Experience() {
       animate={{ y: 0 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.75, ease: "easeOut" }}
-      className="container2"
+      className="container3"
     >
-      <div id="resumeContainer">
+      <Grid container direction="column">
         <p id="title">Experience</p>
 
-        <Grid
-          container
-          rowSpacing={{ xs: 4, sm: 2, md: 1 }}
-          spacing={{ xs: 2, md: 3 }}
-        >
-          {work.map((item, index) => (
-            <div className="">
-              <Grid item xs={4} sm={6} md={12} key={index}>
-                <p>{item.date}</p>
-                <p>{item.school}</p>
-                <p>{item.degree}</p>
+        <Grid container direction="column">
+          <Grid container direction="row" sx={{ width: "400px" }}>
+            {stackslist.map((el, index) => (
+              <Grid item xs={12} sm={12} md={12}>
+                <img className="icon" src={el.image}></img>
+                <Typography variant="h5" gutterBottom>
+                  {el.stack}
+                </Typography>
+                <BorderLinearProgress variant="determinate" value={50} />
               </Grid>
-              <Grid item xs={4} sm={6} md={12} key={index}>
-                <p>{item.date}</p>
-                <p>{item.school}</p>
-                <p>{item.degree}</p>
-              </Grid>
-            </div>
-          ))}
-          {education.map((item, index) => (
-            <Grid item xs={2} sm={4} md={4} key={index}>
-              <p>{item.date}</p>
-              <p>{item.work}</p>
-              <p>{item.position}</p>
-            </Grid>
-          ))}
+            ))}
+          </Grid>
+          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <img className="image" src={Image2}></img>
+          </motion.div>
         </Grid>
-      </div>
+      </Grid>
     </motion.div>
   );
 }
