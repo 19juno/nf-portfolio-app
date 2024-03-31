@@ -1,10 +1,8 @@
 import "./index.css";
 import { motion } from "framer-motion";
-import { Grid, ListItem, Typography } from "@mui/material";
-import Image2 from "../../assets/image.svg";
+import { Grid, Typography } from "@mui/material";
+import Image2 from "../../assets/it-girl2.svg";
 import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
 import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
@@ -14,7 +12,6 @@ import HTML from "../../assets/html.png";
 import NodeJS from "../../assets/nodejs.svg";
 import REACTicon from "../../assets/react.svg";
 import REDUXicon from "../../assets/redux.svg";
-import { Javascript } from "@mui/icons-material";
 
 const work = [
   {
@@ -81,7 +78,7 @@ export default function Experience() {
       animate={{ y: 0 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.75, ease: "easeOut" }}
-      className="container3"
+      className="container_experience"
     >
       <p id="title">My Stack</p>
 
@@ -135,7 +132,13 @@ export default function Experience() {
                       variant="determinate"
                       value={el.percentage}
                       sx={{
-                        width: { xs: "200px", sm: "300px", md: "400px" },
+                        width: {
+                          xs: "200px",
+                          sm: "300px",
+                          md: "400px",
+                          lg: "500px",
+                          xl: "600px",
+                        },
                       }}
                       colorstack={el.color}
                     />
@@ -152,7 +155,7 @@ export default function Experience() {
             whileTap={{ scale: 0.9 }}
             sx={{ margin: 0 }}
           >
-            <img className="image" src={Image2} />
+            <img className="image_experience" src={Image2} />
           </motion.div>
         </Grid>
       </Grid>

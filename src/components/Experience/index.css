@@ -1,11 +1,11 @@
-.container3 {
+.container_experience {
   width: 100vw;
   height: auto;
   padding: 20px 80px 20px 80px;
   border: 1px 0px 0px 0px;
   opacity: 0px;
 }
-.image {
+.image_experience {
   height: 500px;
   border-radius: 15px;
 }
@@ -14,8 +14,15 @@
 }
 
 @media only screen and (max-width: 770px) {
-  .image {
+  .image_experience {
     height: 300px;
     border-radius: 15px;
+  }
+  .container_experience {
+    width: 100vw;
+    height: auto;
+    padding: 20px 0px 20px 100px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
   }
 }

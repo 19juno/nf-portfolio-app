@@ -1,6 +1,6 @@
-.container2 {
+.container_home {
   width: 100vw;
-  height: AUTO;
+  height: auto;
   padding-left: 20px 80px 20px 50px;
   border: 1px 0px 0px 0px;
   opacity: 0px;
@@ -14,16 +14,16 @@
   text-align: center;
   width: 800px;
 }
-.image1 {
+.image_home {
   height: 600px;
   border-radius: 15px;
   margin-right: 0;
 }
 
 @media only screen and (max-width: 770px) {
-  .container2 {
+  .container_home {
     width: 100vw;
-    height: 100vh;
+    height: auto;
     padding-left: 20px;
     padding-right: 20px;
     border: 1px 0px 0px 0px;
@@ -35,10 +35,10 @@
     font-weight: 300;
     line-height: 40px;
     text-align: center;
-    width: 380px;
+    width: 350px;
   }
 
-  .image1 {
+  .image_home {
     height: 300px;
     border-radius: 15px;
     margin-right: 0;

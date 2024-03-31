@@ -19,7 +19,7 @@ export default function AboutMe() {
       animate={{ y: 0 }}
       exit={{ opacity: 1 }}
       transition={{ duration: 0.75, ease: "easeOut" }}
-      className="container2"
+      className="container_home"
     >
       <Grid
         container
@@ -57,7 +57,7 @@ export default function AboutMe() {
         </Grid>
         <Grid item xs={12} sm={12} md={6}>
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <img className="image1" src={Image}></img>
+            <img className="image_home" src={Image}></img>
           </motion.div>
         </Grid>
       </Grid>
